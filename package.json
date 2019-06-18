@@ -1,0 +1,9 @@
+{
+  "name": "twitch-chatbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vitorleonel/twitch-chatbot.git",
+  "author": "Vitor Leonel <falecom@vitorleonel.com>",
+  "license": "MIT",
+  "private": true
+}
