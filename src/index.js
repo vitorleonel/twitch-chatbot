@@ -3,6 +3,8 @@
 const env = require("dotenv").config();
 const tmi = require("tmi.js");
 
+const commands = require("./commands");
+
 const client = tmi.Client({
   identity: {
     username: env.parsed.USERNAME,
@@ -14,16 +16,15 @@ const client = tmi.Client({
 client
   .connect()
   .then(() => {
-    client.on("join", (channel, username, self) => {
-      if (self) return;
-
-      client.say(channel, `@${username} ${env.parsed.MESSAGE_SUFFIX_JOIN}`);
-    });
-
-    client.on("chat", (channel, _, message, self) => {
+    client.on("chat", (channel, context, message, self) => {
       if (self || message[0] != "!") return;
 
-      // implement commands
+      const value = message.replace("!", "").trim();
+      const command = commands(context).find(command => command.key == value);
+
+      if (!command) return;
+
+      client.say(channel, command.say);
     });
 
     client.on("subscription", (channel, username) => {

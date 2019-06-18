@@ -1,0 +1,5 @@
+# List of commands. Insert one per line.
+# Example: command=value or command="value".
+# Use {username} in the description to mention the user.
+
+commands="all commands"
