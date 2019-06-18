@@ -5,5 +5,12 @@
   "repository": "git@github.com:vitorleonel/twitch-chatbot.git",
   "author": "Vitor Leonel <falecom@vitorleonel.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "tmi.js": "^1.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
