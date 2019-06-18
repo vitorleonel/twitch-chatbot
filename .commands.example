@@ -2,4 +2,5 @@
 # Example: command=value or command="value".
 # Use {username} in the description to mention the user.
 
-commands="all commands"
+commands="{username} try to write !bot."
+bot="{username} go to https://github.com/vitorleonel/twitch-chatbot and see the bot's source code."
