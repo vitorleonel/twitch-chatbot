@@ -6,6 +6,9 @@
   "author": "Vitor Leonel <falecom@vitorleonel.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "nodemon ./src"
+  },
   "dependencies": {
     "dotenv": "^8.0.0",
     "tmi.js": "^1.4.5"
