@@ -10,7 +10,10 @@ const client = tmi.Client({
     username: env.parsed.USERNAME,
     password: env.parsed.OAUTH_TOKEN
   },
-  channels: env.parsed.CHANNEL ? [env.parsed.CHANNEL] : []
+  channels: env.parsed.CHANNEL ? [env.parsed.CHANNEL] : [],
+  connection: {
+    reconnect: true
+  }
 });
 
 client
